@@ -55,13 +55,13 @@
   (is-equal 128 (lutil-math:color-scale 0.5 #(0.0 1.0)))
   (is-equal 255 (lutil-math:color-scale 1.0 #(0.0 1.0))))
 
-(deftest odd?
+(deftestskip odd?
   (is (lutil-math:odd? 1))
   (is-not (lutil-math:odd? 2))
   (is (lutil-math:odd? 3))
   (is-not (lutil-math:odd? 4)))
 
-(deftest even?
+(deftestskip even?
   (is-not (lutil-math:even? 1))
   (is (lutil-math:even? 2))
   (is-not (lutil-math:even? 3))

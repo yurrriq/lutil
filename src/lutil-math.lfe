@@ -1,8 +1,6 @@
 (defmodule lutil-math
   (export all))
 
-(include-lib "clj/include/predicates.lfe")
-
 (defun floor (x)
   (let ((truncated (trunc x)))
     (case (- x truncated)

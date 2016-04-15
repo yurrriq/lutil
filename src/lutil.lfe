@@ -3,9 +3,10 @@
 (defmodule lutil
   (export all))
 
-;; The compose macros are included here to allow for easy use in the REPL when
-;; one slurps this module.
-(include-lib "clj/include/compose.lfe")
+;; The compose macros are no longer included here to allow for
+;; easy use in the REPL when one slurps this module.
+;; Instead, add clj to your code path and call:
+;; > (include-lib "clj/include/compose.lfe")
 
 (defun uuid4 ()
   "Adapted from the implementation given here:
