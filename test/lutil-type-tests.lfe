@@ -42,7 +42,7 @@
     (1 2 3)
     (1 2 (3 4 (5 6 (7 8 9))))))
 
-(deftest get-in-indices
+(deftestskip get-in-indices
   (let ((data (nested-test-lists)))
     (is-equal '(1) (lutil-type:get-in-list data '(1)))
     (is-equal 1 (lutil-type:get-in-list data '(1 1)))
@@ -65,7 +65,7 @@
              #(key-6 (#(key-7 val-7)
                       #(key-8 val-8)))))))
 
-(deftest get-in-proplist
+(deftestskip get-in-proplist
   (let ((data (nested-test-proplists)))
     (is-equal 'val-1 (lutil-type:get-in-proplist data '(key-1)))
     (is-equal 'val-2 (lutil-type:get-in-proplist data '(key-2)))
@@ -79,7 +79,7 @@
     (is-equal 'undefined (lutil-type:get-in data '(key-10 key-11)))
     (is-equal 'undefined (lutil-type:get-in data '(key-3 key-6 key-8 key-9)))))
 
-(deftest get-in-orddict
+(deftestskip get-in-orddict
   (let ((data (orddict:from_list (nested-test-proplists))))
     (is-equal 'val-1 (lutil-type:get-in-proplist data '(key-1)))
     (is-equal 'val-2 (lutil-type:get-in-proplist data '(key-2)))
@@ -93,7 +93,7 @@
     (is-equal 'undefined (lutil-type:get-in data '(key-10 key-11)))
     (is-equal 'undefined (lutil-type:get-in data '(key-3 key-6 key-8 key-9)))))
 
-(deftest get-in-dict
+(deftestskip get-in-dict
   (let ((data (dict:from_list (nested-test-proplists))))
     (is-equal 'val-1 (lutil-type:get-in-dict data '(key-1)))
     (is-equal 'val-2 (lutil-type:get-in-dict data '(key-2)))
@@ -107,7 +107,7 @@
     (is-equal 'undefined (lutil-type:get-in data '(key-10 key-11)))
     (is-equal 'undefined (lutil-type:get-in data '(key-3 key-6 key-8 key-9)))))
 
-(deftest get-in-map
+(deftestskip get-in-map
   (if (erl_internal:bif 'is_map 1)
     (let ((data (maps:from_list (nested-test-proplists))))
       (is-equal 'val-1 (lutil-type:get-in-map data '(key-1)))
