@@ -1,5 +1,13 @@
 # lutil
 
+[![Travis CI][travis badge]][travis builds]
+[![Release][tag badge]][latest release]
+
+[travis builds]: https://travis-ci.org/lfex/lutil
+[travis badge]: https://travis-ci.org/lfex/lutil.svg
+[tag badge]: https://img.shields.io/github/tag/lfex/lutil.svg
+[latest release]: https://github.com/lfex/lutil/releases/latest
+
 [![][lutil-logo]][lutil-logo-large]
 
 [lutil-logo]: priv/images/lutil-x250.png
